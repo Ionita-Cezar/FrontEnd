@@ -123,6 +123,7 @@ function countryPopulationObject() {
   
 
 console.log('10. un obiect de forma: ', countryPopulationObject());
+//console.table(countryPopulationObject());
 
 /* 11. un obiect de forma: 
 {
@@ -211,6 +212,70 @@ function oldestCountryStillExisting() {
 }
 
 console.log('16. Tarile cu cea mai veche prima apartie care exista si in zilele noastre: ', oldestCountryStillExisting());
+
+// Display
+
+function showExercise(exerciseNumber) {
+    const resultDiv = document.getElementById('result');
+    let result = '';
+
+    switch (exerciseNumber) {
+        case 1:
+            result = `Numele tarilor participante: ${participatingCountries().join(', ')}`;
+            break;
+        case 2:
+            result = `Top 5 tari cu populatia cea mai numeroasa: ${top5PopulatedCountries().join(', ')}`;
+            break;
+        case 3:
+            result = `Tarile care încep cu litera A: ${countriesStartingWithA().join(', ')}`;
+            break;
+        case 4:
+            result = `Populatia totala: ${totalPopulation()}`;
+            break;
+        case 5:
+            result = `Top 5 tari cu cea mai devreme aparitie: ${top5EarliestAppearances().join(', ')}`;
+            break;
+        case 6:
+            result = 'Natiune-cod: <pre>' + JSON.stringify(countryArray(), null, 2) + '</pre>';
+            break;
+        case 7:
+            result = `Tara cu cele mai multe aparitii: ${countryWithMostAppearances()}`;
+            break;
+        case 8:
+            result = `Tarile cu sportul: ${countriesWithSuccessfulAthletics().join(', ')}`;
+            break;
+        case 9:
+            result = `Tara cea mai mica cu cel putin o medalie: ${smallestCountryWithMedal()}`;
+            break;
+        case 10:
+            result = 'Natiune-populatie: <pre>' + JSON.stringify(countryPopulationObject(), null, 2) + '</pre>';
+            break;
+        case 11:
+            result = 'Tari alfabetic: <pre>' + JSON.stringify(countriesByAlphabet(), null, 2) + '</pre>';
+            break;
+        case 12:
+            result = 'Tara random si populatia acesteia: <pre>' + JSON.stringify(randomCountry(), null, 2) + '</pre>';
+            break;
+        case 13:
+            result = `Tari cu populatia peste 1 milion si cu mai multe medalii de iarna decat de vara: ${countriesMoreWinterMedals().join(', ')}`;
+            break;
+        case 14:
+            result = `Tari cu populatia sub 5 milioane care au castigat un numar de medalii mai mare decat 50% din media medaliilor: ${countriesWithMedalsAboveAverage().join(', ')}`;
+            break;
+        case 15:
+            result = `Tara cu cea mai recenta prima aparitie: ${mostRecentFirstAppearance()}`;
+            break;
+        case 16:
+            result = `Tara cu cea mai veche prima aparitie care exista si azi: ${oldestCountryStillExisting()}`;
+            break;
+
+        default:
+            result = 'Invalid Exercise Number';
+    }
+
+    resultDiv.innerHTML = `<strong>Exercise ${exerciseNumber} Result:</strong> ${result}`;
+}
+
 
 // console.log(participatingCountries());
 
