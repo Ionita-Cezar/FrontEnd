@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="left-section">
+        <div class="logo">
+            <img src="assets/ntt-logo-cxp.svg" alt="NTT Data Logo">
+        </div>
+        <button onclick="goBack()">← Zurück</button>
+    </div>
+
+    <div class="sidebar">
+        <button class="logout-button" onclick="logout()">
+            <img src="assets/logout.svg" alt="Logout">
+        </button>
+
+        <!-- Sidebar buttons preserved as-is to maintain layout -->
+        <button onclick="action(10)">10</button>
+        <button onclick="action(9)">9</button>
+        <button onclick="action(8)">8</button>
+        <button onclick="action(7)">7</button>
+        <button onclick="action(6)">6</button>
+        <button onclick="action(5)">5</button>
+        <button onclick="action(4)">4</button>
+        <button onclick="action(3)">3</button>
+        <button onclick="action(2)">2</button>
+        <button onclick="action(1)">1</button>
+
+        <div class="access-card">
+            <img src="assets/meniu_button_acces_card.svg" alt="Access Card">
+        </div>
+
+        <button class="ntt-button" onclick="nttLove()">We ♥ NTT</button>
+    </div>
+
+</body>
+</html>
