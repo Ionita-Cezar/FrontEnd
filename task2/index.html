@@ -20,7 +20,6 @@
             <img src="assets/logout.svg" alt="Logout">
         </button>
 
-        <!-- Sidebar buttons preserved as-is to maintain layout -->
         <button onclick="action(10)">10</button>
         <button onclick="action(9)">9</button>
         <button onclick="action(8)">8</button>
@@ -36,8 +35,22 @@
             <img src="assets/meniu_button_acces_card.svg" alt="Access Card">
         </div>
 
-        <button class="ntt-button" onclick="nttLove()">We ♥ NTT</button>
+        <button class="ntt-button" onclick="ntt()">We ♥ NTT</button>
     </div>
+
+    <script>
+        function goBack() {
+            alert("Going back!");
+        }
+
+        function logout() {
+            alert("Loggind out!");
+        }
+
+        function action(num) {
+            alert("Going to floor" + num);
+        }
+    </script>
 
 </body>
 </html>
